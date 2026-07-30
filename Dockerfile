@@ -33,6 +33,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules/@tailwindcss/postcss ./node_modules/@tailwindcss/postcss
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules/tailwindcss ./node_modules/tailwindcss
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules/postcss ./node_modules/postcss
 
 USER nextjs
 EXPOSE 3000
