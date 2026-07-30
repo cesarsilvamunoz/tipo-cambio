@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'DIVISAEXPERT • Conversor de Monedas y Tipo de Cambio',
+  title: 'TIPOCAMBIO • Conversor de Monedas y Tipo de Cambio',
   description:
     'Plataforma oficial de conversión de divisas en Costa Rica, Brasil y el mundo. Cotizaciones en tiempo real para CRC, BRL, USD, EUR y más monedas.',
-  applicationName: 'DIVISAEXPERT',
+  applicationName: 'TIPOCAMBIO',
   keywords: [
     'tipo de cambio',
     'conversor de monedas',
@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'BancaDivisa Digital Solutions S.A.' }],
   creator: 'BancaDivisa Digital Solutions S.A.',
-  publisher: 'DIVISAEXPERT',
+  publisher: 'TIPOCAMBIO',
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
-    title: 'DIVISAEXPERT',
+    title: 'TIPOCAMBIO',
     statusBarStyle: 'black-translucent',
     startupImage: ['/icon-512.png'],
   },
@@ -61,14 +61,14 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'DIVISAEXPERT • Conversor de Monedas y Tipo de Cambio',
+    title: 'TIPOCAMBIO • Conversor de Monedas y Tipo de Cambio',
     description: 'Conversor de monedas en tiempo real para CRC, BRL, USD, EUR y más.',
     images: ['/og-image.jpg'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DIVISAEXPERT • Conversor de Monedas',
+    title: 'TIPOCAMBIO • Conversor de Monedas',
     description: 'Conversor de monedas en tiempo real para CRC, BRL, USD, EUR y más.',
     images: ['/og-image.jpg'],
   },
@@ -98,7 +98,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="DIVISAEXPERT" />
+        <meta name="apple-mobile-web-app-title" content="TIPOCAMBIO" />
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="apple-touch-startup-image" href="/icon-512.png" />
       </head>
