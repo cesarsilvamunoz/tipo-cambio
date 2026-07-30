@@ -6,7 +6,7 @@ FROM node:${NODE_VERSION}-slim AS base
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3000 \
+    PORT=80 \
     HOSTNAME=0.0.0.0
 
 FROM base AS deps
@@ -38,9 +38,9 @@ COPY --from=deps --chown=nextjs:nodejs /app/node_modules/tailwindcss ./node_modu
 COPY --from=deps --chown=nextjs:nodejs /app/node_modules/postcss ./node_modules/postcss
 
 USER nextjs
-EXPOSE 3000
+EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
-  CMD curl -fsS http://127.0.0.1:3000/api/rates || exit 1
+  CMD curl -fsS http://127.0.0.1:80/api/rates || exit 1
 
 CMD ["node", "server.js"]
